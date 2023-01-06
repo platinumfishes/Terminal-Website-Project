@@ -7,4 +7,4 @@ temp_btn.addEventListener("click", function(){
     newCommand.innerHTML = commandline.value;
     commands.appendChild(newCommand);  
     commandline.value = "";
-});
+}); 
