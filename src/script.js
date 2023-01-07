@@ -1,6 +1,11 @@
 var commands = document.getElementById("commands");
 var commandline = document.getElementById("user_input");
-/* var temp_btn = document.getElementById("temp_btn") */
+
+
+
+/* BUTTON OPTION BELOW
+
+var temp_btn = document.getElementById("temp_btn") 
 
 temp_btn.addEventListener("click", function(){
     var newCommand = document.createElement("li");
@@ -8,6 +13,7 @@ temp_btn.addEventListener("click", function(){
     commands.appendChild(newCommand);  
     commandline.value = "";
 });
+*/
 
 function execute(input){
     var newCommand = document.createElement("li");
@@ -16,15 +22,16 @@ function execute(input){
 }
 
 function key(e){
-    const input = user_input.innerHTML;
+    const input = user_input.value;
 
     if(e.key == "Enter"){
-        execute();
+        execute(input);
         user_input.value = "";
         return;
     }
-
-    user_input.innerHTML = input + e.key;
+    else {
+        user_input.innerHTML = input + e.key;
+    }
 }  
 
 document.addEventListener("keypress", key);
